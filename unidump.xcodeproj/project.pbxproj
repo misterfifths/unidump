@@ -288,10 +288,14 @@
 		BD236D4A1FF33296002A5ED4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
+				INSTALL_PATH = "~/bin";
 				LIBRARY_SEARCH_PATHS = /usr/local/opt/icu4c/lib;
 				OTHER_LDFLAGS = (
 					"-licudata",
@@ -306,10 +310,14 @@
 		BD236D4B1FF33296002A5ED4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
+				INSTALL_PATH = "~/bin";
 				LIBRARY_SEARCH_PATHS = /usr/local/opt/icu4c/lib;
 				OTHER_LDFLAGS = (
 					"-licudata",
