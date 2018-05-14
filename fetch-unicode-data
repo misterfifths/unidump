@@ -1,0 +1,4 @@
+#!/bin/bash
+
+curl -#OJ http://www.unicode.org/Public/UCD/latest/ucd/NameAliases.txt
+curl -#OJ https://www.unicode.org/Public/UCD/latest/ucd/NamedSequences.txt

@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD035CA41FF5CF8F00B88D6B /* MR5ComposedCharacterSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = BD035CA31FF5CF8F00B88D6B /* MR5ComposedCharacterSequence.m */; };
+		BD035CA71FF5D4DD00B88D6B /* MR5CodePointDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = BD035CA61FF5D4DD00B88D6B /* MR5CodePointDescriptor.m */; };
+		BD035CAA1FF5D8E500B88D6B /* NSString+MR5StringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BD035CA91FF5D8E500B88D6B /* NSString+MR5StringUtils.m */; };
+		BD035CAD1FF6BB8300B88D6B /* MR5CodePointAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = BD035CAC1FF6BB8300B88D6B /* MR5CodePointAlias.m */; };
+		BD035CB61FF6D53400B88D6B /* MR5CodePointAliasData.m in Sources */ = {isa = PBXBuildFile; fileRef = BD035CB51FF6D53400B88D6B /* MR5CodePointAliasData.m */; };
+		BD035CBC1FF6F93600B88D6B /* MR5SequenceNameData.m in Sources */ = {isa = PBXBuildFile; fileRef = BD035CBB1FF6F93600B88D6B /* MR5SequenceNameData.m */; };
 		BD236D461FF33296002A5ED4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD236D451FF33296002A5ED4 /* main.m */; };
+		BD5059521FF472D200B1C4D8 /* EmojiFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5059511FF472D200B1C4D8 /* EmojiFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +30,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BD035CA21FF5CF8F00B88D6B /* MR5ComposedCharacterSequence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MR5ComposedCharacterSequence.h; sourceTree = "<group>"; };
+		BD035CA31FF5CF8F00B88D6B /* MR5ComposedCharacterSequence.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MR5ComposedCharacterSequence.m; sourceTree = "<group>"; };
+		BD035CA51FF5D4DD00B88D6B /* MR5CodePointDescriptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MR5CodePointDescriptor.h; sourceTree = "<group>"; };
+		BD035CA61FF5D4DD00B88D6B /* MR5CodePointDescriptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MR5CodePointDescriptor.m; sourceTree = "<group>"; };
+		BD035CA81FF5D8E500B88D6B /* NSString+MR5StringUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MR5StringUtils.h"; sourceTree = "<group>"; };
+		BD035CA91FF5D8E500B88D6B /* NSString+MR5StringUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+MR5StringUtils.m"; sourceTree = "<group>"; };
+		BD035CAB1FF6BB8300B88D6B /* MR5CodePointAlias.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MR5CodePointAlias.h; sourceTree = "<group>"; };
+		BD035CAC1FF6BB8300B88D6B /* MR5CodePointAlias.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MR5CodePointAlias.m; sourceTree = "<group>"; };
+		BD035CB41FF6D53400B88D6B /* MR5CodePointAliasData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MR5CodePointAliasData.h; sourceTree = SOURCE_ROOT; };
+		BD035CB51FF6D53400B88D6B /* MR5CodePointAliasData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MR5CodePointAliasData.m; sourceTree = SOURCE_ROOT; };
+		BD035CBA1FF6F93600B88D6B /* MR5SequenceNameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MR5SequenceNameData.h; sourceTree = SOURCE_ROOT; };
+		BD035CBB1FF6F93600B88D6B /* MR5SequenceNameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MR5SequenceNameData.m; sourceTree = SOURCE_ROOT; };
 		BD236D421FF33296002A5ED4 /* unidump */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = unidump; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD236D451FF33296002A5ED4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BD236D4D1FF33DCA002A5ED4 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		BD5059501FF471B600B1C4D8 /* EMFEmojiToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMFEmojiToken.h; sourceTree = "<group>"; };
+		BD5059511FF472D200B1C4D8 /* EmojiFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EmojiFoundation.framework; path = ../../../../System/Library/PrivateFrameworks/EmojiFoundation.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD5059521FF472D200B1C4D8 /* EmojiFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +66,7 @@
 			children = (
 				BD236D441FF33296002A5ED4 /* unidump */,
 				BD236D431FF33296002A5ED4 /* Products */,
+				BD236D4C1FF33DCA002A5ED4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +82,30 @@
 			isa = PBXGroup;
 			children = (
 				BD236D451FF33296002A5ED4 /* main.m */,
+				BD5059501FF471B600B1C4D8 /* EMFEmojiToken.h */,
+				BD035CA21FF5CF8F00B88D6B /* MR5ComposedCharacterSequence.h */,
+				BD035CA31FF5CF8F00B88D6B /* MR5ComposedCharacterSequence.m */,
+				BD035CA51FF5D4DD00B88D6B /* MR5CodePointDescriptor.h */,
+				BD035CA61FF5D4DD00B88D6B /* MR5CodePointDescriptor.m */,
+				BD035CA81FF5D8E500B88D6B /* NSString+MR5StringUtils.h */,
+				BD035CA91FF5D8E500B88D6B /* NSString+MR5StringUtils.m */,
+				BD035CAB1FF6BB8300B88D6B /* MR5CodePointAlias.h */,
+				BD035CAC1FF6BB8300B88D6B /* MR5CodePointAlias.m */,
+				BD035CB41FF6D53400B88D6B /* MR5CodePointAliasData.h */,
+				BD035CB51FF6D53400B88D6B /* MR5CodePointAliasData.m */,
+				BD035CBA1FF6F93600B88D6B /* MR5SequenceNameData.h */,
+				BD035CBB1FF6F93600B88D6B /* MR5SequenceNameData.m */,
 			);
 			path = unidump;
+			sourceTree = "<group>";
+		};
+		BD236D4C1FF33DCA002A5ED4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD5059511FF472D200B1C4D8 /* EmojiFoundation.framework */,
+				BD236D4D1FF33DCA002A5ED4 /* libicucore.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,7 +134,7 @@
 		BD236D3A1FF33296002A5ED4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Misterfifths Heavy Industries";
 				TargetAttributes = {
 					BD236D411FF33296002A5ED4 = {
@@ -119,7 +165,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD035CA71FF5D4DD00B88D6B /* MR5CodePointDescriptor.m in Sources */,
+				BD035CB61FF6D53400B88D6B /* MR5CodePointAliasData.m in Sources */,
+				BD035CBC1FF6F93600B88D6B /* MR5SequenceNameData.m in Sources */,
 				BD236D461FF33296002A5ED4 /* main.m in Sources */,
+				BD035CAD1FF6BB8300B88D6B /* MR5CodePointAlias.m in Sources */,
+				BD035CA41FF5CF8F00B88D6B /* MR5ComposedCharacterSequence.m in Sources */,
+				BD035CAA1FF5D8E500B88D6B /* NSString+MR5StringUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +192,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -147,6 +200,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -155,7 +209,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -195,6 +249,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -202,6 +257,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -210,7 +266,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -232,18 +288,36 @@
 		BD236D4A1FF33296002A5ED4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9H94YF52ZT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/opt/icu4c/lib;
+				OTHER_LDFLAGS = (
+					"-licudata",
+					"-licuio",
+					"-licuuc",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_HEADER_SEARCH_PATHS = /usr/local/opt/icu4c/include;
 			};
 			name = Debug;
 		};
 		BD236D4B1FF33296002A5ED4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9H94YF52ZT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/opt/icu4c/lib;
+				OTHER_LDFLAGS = (
+					"-licudata",
+					"-licuio",
+					"-licuuc",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_HEADER_SEARCH_PATHS = /usr/local/opt/icu4c/include;
 			};
 			name = Release;
 		};
