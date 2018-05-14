@@ -130,7 +130,7 @@ Composed emoji: 'flag of Switzerland'
 ```
 
 
-Or, against a recent [iOS/OSX crashing string](https://yalujailbreak.net/indian-unicode-symbol-bug/):
+Or, against a recent [iOS/OSX crashing string](https://manishearth.github.io/blog/2018/02/15/picking-apart-the-crashing-ios-string/):
 
 ```sh
 $ unidump జ్ఞ‌ా
