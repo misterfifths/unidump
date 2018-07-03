@@ -10,6 +10,7 @@ MR5CodePointAliasData.[hm]
 MR5SequenceNameData.[hm]
 
 scraps/
+dist/
 
 # Xcode
 build/

@@ -295,7 +295,7 @@
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
-				INSTALL_PATH = "~/bin";
+				INSTALL_PATH = "$(PROJECT_DIR)/dist";
 				LIBRARY_SEARCH_PATHS = /usr/local/opt/icu4c/lib;
 				OTHER_LDFLAGS = (
 					"-licudata",
@@ -317,7 +317,7 @@
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
-				INSTALL_PATH = "~/bin";
+				INSTALL_PATH = "$(PROJECT_DIR)/dist";
 				LIBRARY_SEARCH_PATHS = /usr/local/opt/icu4c/lib;
 				OTHER_LDFLAGS = (
 					"-licudata",
