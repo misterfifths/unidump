@@ -154,28 +154,28 @@ def escapedCodePoint(codePoint):
     return f'\\x{codePoint:04x}'
 
 def sequenceFilesFromSequences(namedSequences, headerTemplateFilename, impTemplateFilename):
-    NAMED_SEQUENCE_COUNT_TOKEN = '<NAMED SEQUENCE COUNT>'
-    NAMED_SEQUENCE_STRUCTS_TOKEN = '<NAMED SEQUENCE STRUCTS>'
-    MAX_SEQUENCE_LENGTH_TOKEN = '<MAX SEQUENCE LENGTH>'
+    NAMED_SEQUENCE_ENTRIES_TOKEN = '<NAMED SEQUENCE ENTRIES>'
 
-    namedSequenceCount = len(namedSequences)
-    namedSequenceStructStrings = []
-    maxSequenceLength = 0
+    namedSequenceEntryStrings = []
 
     for namedSequence in namedSequences:
-        maxSequenceLength = max(maxSequenceLength, len(namedSequence.codePoints))
+        sequenceString = ''
+        for codePoint in namedSequence.codePoints:
+            if codePoint <= 127:
+                # ASCII codepoints aren't representable by the \U syntax for some reason
+                sequenceString += chr(codePoint)
+            else:
+                sequenceString += f'\\U{codePoint:08x}'
 
-        codePointsString = ', '.join(f'0x{c:04x}' for c in namedSequence.codePoints)
-        structString = f'\t{{ {len(namedSequence.codePoints)}, {{ {codePointsString} }}, @"{namedSequence.name}" }}'
-        namedSequenceStructStrings.append(structString)
+        entryString = f'\t\t@"{sequenceString}": @"{namedSequence.name}"'
+
+        namedSequenceEntryStrings.append(entryString)
     
-    namedSequenceStructString = ',\n'.join(namedSequenceStructStrings)
+    namedSequenceEntryString = ',\n'.join(namedSequenceEntryStrings)
 
 
     def doReplacements(s):
-        s = s.replace(NAMED_SEQUENCE_COUNT_TOKEN, str(namedSequenceCount))
-        s = s.replace(NAMED_SEQUENCE_STRUCTS_TOKEN, namedSequenceStructString)
-        s = s.replace(MAX_SEQUENCE_LENGTH_TOKEN, str(maxSequenceLength))
+        s = s.replace(NAMED_SEQUENCE_ENTRIES_TOKEN, namedSequenceEntryString)
         return s
 
 
