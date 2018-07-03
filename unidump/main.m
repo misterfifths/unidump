@@ -17,7 +17,7 @@ int main(int argc, const char * argv[])
         NSString *string = [positionalParams componentsJoinedByString:@" "];
 
         NSArray *sequences = [MR5ComposedCharacterSequence composedCharacterSequencesFromString:string];
-        NSString *res = [sequences componentsJoinedByString:@"\n"];
+        NSString *res = [sequences componentsJoinedByString:@"\n\n"];
 
         u_printf("%S\n", res.mr5_nullTerminatedUTF16Data.bytes);
     }

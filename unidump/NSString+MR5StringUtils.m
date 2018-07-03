@@ -54,15 +54,25 @@
     return d;
 }
 
--(NSString *)mr5_formattedUTF8Representation
+-(NSString *)mr5_formattedRepresentationOfEncoding:(NSStringEncoding)encoding
 {
     NSMutableString *res = [NSMutableString new];
-    NSData *utf8Data = [self dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *utf8Data = [self dataUsingEncoding:encoding];
     for(NSUInteger i = 0; i < utf8Data.length; i++) {
         [res appendFormat:@"%02x ", ((const char *)utf8Data.bytes)[i] & 0xff];
     }
 
     return res;
+}
+
+-(NSString *)mr5_formattedUTF8Representation
+{
+    return [self mr5_formattedRepresentationOfEncoding:NSUTF8StringEncoding];
+}
+
+-(NSString *)mr5_formattedUTF16LERepresentation
+{
+    return [self mr5_formattedRepresentationOfEncoding:NSUTF16LittleEndianStringEncoding];
 }
 
 -(NSString *)mr5_indentedString

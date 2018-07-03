@@ -4,6 +4,7 @@
 #import "MR5CodePointDescriptor.h"
 #import "NSString+MR5StringUtils.h"
 #import "MR5CodePointAlias.h"
+#import "MR5InfoTidbit.h"
 #import <unicode/uchar.h>
 #import <unicode/uscript.h>
 
@@ -188,66 +189,76 @@ typedef enum : uint8_t {
 
 #pragma mark Builtins
 
--(NSString *)description
+-(MR5InfoTidbit *)infoTidbit
 {
-    NSMutableString *res = [NSMutableString new];
-
+    NSString *printedString;
     if(self.isPrintable)
-        [res appendFormat:@"'%@'", [self stringByIsolatingCombinerWithString:MR5DefaultCombiningCharacterIsolator]];
+        printedString = [NSString stringWithFormat:@"'%@'", [self stringByIsolatingCombinerWithString:MR5DefaultCombiningCharacterIsolator]];
     else
-        [res appendString:@"<unprintable>"];
+        printedString = @"<unprintable>";
 
-    [res appendString:@"\n"];
+    MR5InfoTidbit *tidbit = [MR5InfoTidbit tidbitWithValue:printedString];
 
-    [res appendString:self.name ?: @"<no name>"];
 
-    [res appendString:@"\n"];
+    [tidbit addChildWithValue:self.name ?: @"<no name>"];
+
 
     NSArray *aliases = self.aliases;
     if(aliases) {
-        [res appendString:@"Aliases:\n\t"];
+        MR5InfoTidbit *aliasesTidbit = [MR5InfoTidbit tidbitWithValue:@"Aliases"];
+        aliasesTidbit.indentChildren = YES;
 
-        [res appendString:[aliases componentsJoinedByString:@"\n\t"]];
+        for(MR5CodePointAlias *alias in aliases)
+            [aliasesTidbit addChildWithValue:alias.description];
 
-        [res appendString:@"\n"];
+        [tidbit addChild:aliasesTidbit];
     }
 
-    [res appendFormat:@"Unicode\t%@", self.formattedCodePoint];
 
-    [res appendString:@"\n"];
+    [tidbit addChildWithLabel:@"Unicode" value:self.formattedCodePoint];
 
-    [res appendFormat:@"UTF-8\t%@", self.string.mr5_formattedUTF8Representation];
 
-    [res appendString:@"\n"];
+    [tidbit addChildWithLabel:@"UTF-8 (hex)" value:self.string.mr5_formattedUTF8Representation];
 
-    [res appendFormat:@"Category\t%@ (%@)", self.longGeneralCategoryName, self.shortGeneralCategoryName];
 
-    [res appendString:@"\n"];
+    [tidbit addChildWithLabel:@"UTF-16LE (hex)" value:self.string.mr5_formattedUTF16LERepresentation];
+
+
+    if([self.longBlockName isEqualToString:@"Basic_Latin"]) {
+        [tidbit addChildWithLabel:@"ASCII (dec)" value:[NSString stringWithFormat:@"%u", self.codePoint]];
+    }
+
+
+    NSString *categoryString = [NSString stringWithFormat:@"%@ (%@)", self.longGeneralCategoryName, self.shortGeneralCategoryName];
+    [tidbit addChildWithLabel:@"Category" value:categoryString];
+
 
     NSString *longBlockName = self.longBlockName;
     NSString *shortBlockName = self.shortBlockName;
+    NSString *blockString;
     if([longBlockName isEqualToString:shortBlockName])
-        [res appendFormat:@"Block\t%@", longBlockName];
+        blockString = longBlockName;
     else
-        [res appendFormat:@"Block\t%@ (%@)", longBlockName, shortBlockName];
+        blockString = [NSString stringWithFormat:@"%@ (%@)", longBlockName, shortBlockName];
+
+    [tidbit addChildWithLabel:@"Block" value:blockString];
+
 
     NSString *scriptName = self.scriptName;
-    if(![scriptName isEqualToString:@"Common"] && ![scriptName isEqualToString:@"Inherited"]) {
-        [res appendString:@"\n"];
+    if(![scriptName isEqualToString:@"Common"] && ![scriptName isEqualToString:@"Inherited"])
+        [tidbit addChildWithLabel:@"Script" value:scriptName];
 
-        [res appendFormat:@"Script\t%@", scriptName];
-    }
 
     MR5CombinerType combinerType = self.combinerType;
-    if(combinerType != MR5CombinerTypeNoncombiner) {
-        [res appendString:@"\n"];
+    if(combinerType != MR5CombinerTypeNoncombiner)
+        [tidbit addChildWithLabel:@"Combiner" value:combinerType == MR5CombinerTypeSingle ? @"Single" : @"Double"];
 
-        [res appendFormat:@"Combiner\t%@", combinerType == MR5CombinerTypeSingle ? @"Single" : @"Double"];
-    }
+    return tidbit;
+}
 
-    [res appendString:@"\n"];
-
-    return res;
+-(NSString *)description
+{
+    return [self infoTidbit].formattedString;
 }
 
 @end

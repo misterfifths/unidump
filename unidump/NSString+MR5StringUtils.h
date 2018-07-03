@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSData *mr5_nullTerminatedUTF16Data;
 
 @property (nonatomic, copy, readonly) NSString *mr5_formattedUTF8Representation;  // fe 01 a0, e.g.
+@property (nonatomic, copy, readonly) NSString *mr5_formattedUTF16LERepresentation;
 
 @property (nonatomic, copy, readonly) NSString *mr5_indentedString;  // indents every line by a tab. Trailing newlines stripped
 

@@ -205,7 +205,7 @@
             [res appendString:@"\n\n"];
     }
 
-    [res appendString:@"\n]\n"];
+    [res appendString:@"\n]"];
 
     return res;
 }

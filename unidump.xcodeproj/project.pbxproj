@@ -15,6 +15,7 @@
 		BD035CBC1FF6F93600B88D6B /* MR5SequenceNameData.m in Sources */ = {isa = PBXBuildFile; fileRef = BD035CBB1FF6F93600B88D6B /* MR5SequenceNameData.m */; };
 		BD236D461FF33296002A5ED4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD236D451FF33296002A5ED4 /* main.m */; };
 		BD5059521FF472D200B1C4D8 /* EmojiFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5059511FF472D200B1C4D8 /* EmojiFoundation.framework */; };
+		BD6F538520EBDF31007C39E0 /* MR5InfoTidbit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6F538420EBDF31007C39E0 /* MR5InfoTidbit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +48,8 @@
 		BD236D4D1FF33DCA002A5ED4 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		BD5059501FF471B600B1C4D8 /* EMFEmojiToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMFEmojiToken.h; sourceTree = "<group>"; };
 		BD5059511FF472D200B1C4D8 /* EmojiFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EmojiFoundation.framework; path = ../../../../System/Library/PrivateFrameworks/EmojiFoundation.framework; sourceTree = "<group>"; };
+		BD6F538320EBDF31007C39E0 /* MR5InfoTidbit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MR5InfoTidbit.h; sourceTree = "<group>"; };
+		BD6F538420EBDF31007C39E0 /* MR5InfoTidbit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MR5InfoTidbit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 				BD035CB51FF6D53400B88D6B /* MR5CodePointAliasData.m */,
 				BD035CBA1FF6F93600B88D6B /* MR5SequenceNameData.h */,
 				BD035CBB1FF6F93600B88D6B /* MR5SequenceNameData.m */,
+				BD6F538320EBDF31007C39E0 /* MR5InfoTidbit.h */,
+				BD6F538420EBDF31007C39E0 /* MR5InfoTidbit.m */,
 			);
 			path = unidump;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 			files = (
 				BD035CA71FF5D4DD00B88D6B /* MR5CodePointDescriptor.m in Sources */,
 				BD035CB61FF6D53400B88D6B /* MR5CodePointAliasData.m in Sources */,
+				BD6F538520EBDF31007C39E0 /* MR5InfoTidbit.m in Sources */,
 				BD035CBC1FF6F93600B88D6B /* MR5SequenceNameData.m in Sources */,
 				BD236D461FF33296002A5ED4 /* main.m in Sources */,
 				BD035CAD1FF6BB8300B88D6B /* MR5CodePointAlias.m in Sources */,
